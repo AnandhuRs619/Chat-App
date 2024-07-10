@@ -4,7 +4,7 @@
   "main": "backend/dist/index.js",
   "type": "module",
   "scripts": {
-     "dev": "nodemon --watch backend/src --exec \"node --loader ts-node/esm\" backend/src/index.ts",
+    "dev": "nodemon --watch backend/src --exec \"node --loader ts-node/esm\" backend/src/index.ts",
     "build": "tsc && npm install && prisma generate --schema=./backend/prisma/schema.prisma && npm install --prefix frontend && npm run build --prefix frontend",
     "start": "node backend/dist/src/index.js"
   },
@@ -22,13 +22,13 @@
     "typescript": "^5.5.3"
   },
   "dependencies": {
-    "@prisma/client": "^5.14.0",
+    "@prisma/client": "^5.16.2",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
-    "prisma": "^5.14.0",
+    "prisma": "^5.16.2",
     "socket.io": "^4.7.5"
   }
 }
