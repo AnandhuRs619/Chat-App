@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
-import Home from "./_ui_design/pages/Home"
-import SignUp from "./_ui_design/pages/SignUp"
-import Login from "./_ui_design/pages/Login"
+import Home from "./pages/Home"
+import SignUp from "./pages/SignUp"
+import Login from "./pages/Login"
 
 
 
