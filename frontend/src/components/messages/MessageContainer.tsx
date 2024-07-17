@@ -1,5 +1,6 @@
 import { useAuthContext } from "../../context/AuthContext";
 import useConversation from "../../zustand/useConversation";
+import Conversation from "../sidebar/Conversation";
 import MessageInput from "./MessageInput";
 import Messages from "./Messages";
 import { PhoneCall, Video, MoreHorizontal, MessageCircle } from 'lucide-react';
@@ -7,6 +8,7 @@ import { PhoneCall, Video, MoreHorizontal, MessageCircle } from 'lucide-react';
 
 const MessageContainer = () => {
    const {selectedConversation}=useConversation()
+  
 	return (
 	
 <div className='w-full flex flex-col'>
@@ -16,10 +18,10 @@ const MessageContainer = () => {
    <div className='bg-slate-500 px-4 py-2 mb-2 flex items-center gap-x-4'>
      <div className='hidden md:block chat-image avatar'>
        <div className='w-6 md:w-10 rounded-full'>
-         <img alt='Tailwind CSS chat bubble component' src={"/bg.jpg"} />
+         <img alt='Tailwind CSS chat bubble component' src={selectedConversation.profilePic} />
        </div>
      </div>
-     <span className='text-gray-900 font-bold'>John Doe</span>
+     <span className='text-gray-900 font-bold'>{selectedConversation.fullname}</span>
      <div className='flex ml-auto items-center gap-x-2'>
        <PhoneCall className='w-5 h-5 text-gray-900 cursor-pointer' />
        <Video className='w-5 h-5 text-gray-900 cursor-pointer' />
