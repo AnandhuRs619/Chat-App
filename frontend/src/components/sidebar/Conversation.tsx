@@ -1,4 +1,4 @@
-const Conversation = ({ conversation }: { conversation: any }) => {
+const Conversation = ({ conversation ,emoji}: { conversation: ConversationType ,emoji : string}) => {
 	return (
 		<>
 			<div className='flex gap-2 items-center hover:bg-sky-500 rounded p-2 py-1 cursor-pointer'>
@@ -10,8 +10,8 @@ const Conversation = ({ conversation }: { conversation: any }) => {
 
 				<div className='flex flex-col flex-1'>
 					<div className='flex gap-3 justify-between'>
-						<p className='font-bold text-gray-200 text-sm md:text-md'>{conversation.fullName}</p>
-						<span className='text-xl hidden md:inline-block'>{conversation.emoji}</span>
+						<p className='font-bold text-gray-200 text-sm md:text-md'>{conversation.fullname}</p>
+						<span className='text-xl hidden md:inline-block'>{emoji}</span>
 					</div>
 				</div>
 			</div>
