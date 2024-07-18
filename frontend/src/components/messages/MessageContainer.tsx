@@ -1,6 +1,5 @@
 import { useAuthContext } from "../../context/AuthContext";
 import useConversation from "../../zustand/useConversation";
-import Conversation from "../sidebar/Conversation";
 import MessageInput from "./MessageInput";
 import Messages from "./Messages";
 import { PhoneCall, Video, MoreHorizontal, MessageCircle } from 'lucide-react';

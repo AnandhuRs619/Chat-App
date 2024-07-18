@@ -5,4 +5,10 @@ type ConversationType = {
     fullname: string;
     profilePic: string;
 };
-typ
+
+type MessageType = {
+    id: string;
+    body: string;
+    senderId: string;
+    createdAt : string
+};
