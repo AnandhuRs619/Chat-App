@@ -3,8 +3,9 @@ import cookieParser from "cookie-parser";
 import authRouthes from "./routes/authRoute.js";
 import messageRoutes from "./routes/messageRoute.js";
 import dotenv from "dotenv";
+import { app,server } from "./socket/socket.js";
 dotenv.config();
-const app = express();
+
 app.use(express.json()); // for parsing the data
 app.use(cookieParser()); // for Parsing Cookies
 
@@ -15,7 +16,7 @@ app.get("/", (req, res) => {
 });
 const PORT = process.env.PORT || 5000;
 
-app.listen(5000, () => {
+server.listen(5000, () => {
   console.log(`server is running on http://localhost:${PORT}`);
 });
 
