@@ -68,7 +68,6 @@ export const getMessages = async (req: Request, res: Response) => {
   try {
     const receiverId = req.params.id;
     const senderId = req.user.id;
-    console.log(receiverId, " dfghfg ", senderId);
     const conversation = await prisma.converation.findFirst({
       where: {
         participantIds: {

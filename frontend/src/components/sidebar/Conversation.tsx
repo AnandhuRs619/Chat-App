@@ -8,7 +8,6 @@ const Conversation = ({ conversation, emoji }: { conversation: ConversationType;
 	const { onlineUsers } = useSocketContext();
 
 	const isOnline = onlineUsers.includes(conversation.id);
-	console.log(conversation.id)
 
 	return (
 		<>
