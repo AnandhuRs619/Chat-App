@@ -26,7 +26,7 @@ const MessageContainer = () => {
        <Video className='w-5 h-5 text-gray-900 cursor-pointer' />
 
        {/* Dropdown for More icon */}
-       <div className="dropdown dropdown-end">
+       <div className="dropdown dropdown-right">
          <label tabIndex={0} className='cursor-pointer'>
            <MoreHorizontal className='w-5 h-5 text-gray-900' />
          </label>
